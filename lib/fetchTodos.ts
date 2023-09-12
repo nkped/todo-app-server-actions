@@ -1,4 +1,4 @@
-'use server'
+
 
 export async function fetchTodos() {
     try {
