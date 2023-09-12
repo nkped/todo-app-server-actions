@@ -1,8 +1,19 @@
 import React from 'react'
+import { addTodo } from '@/lib/action'
 
 const AddTodo = () => {
+
   return (
-    <div>AddTodo</div>
+    <form action={addTodo}>
+      <input 
+        type='text' 
+        name='title'
+        placeholder='Next todo'    
+        />
+
+       <button type='submit'>Submit</button>
+
+    </form>
   )
 }
 
