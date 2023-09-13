@@ -20,9 +20,30 @@ export async function addTodo(data: FormData) {
 
 
 export async function deleteTodo(todo: Todo) {
-    await fetch(`http://localhost:3500/todos/${todo.id}`, {
+    const res = await fetch(`http://localhost:3500/todos/${todo.id}`, {
     method: 'DELETE'
     })
 
+    await res.json()
+
+    revalidatePath('/')
+}
+
+
+
+export async function updateTodo(
+    todo: Todo
+) {
+    const res = await fetch(`http://localhost:3500/todos/${todo.id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            ...todo, completed: !todo.completed
+        })
+    })
+
+    await res.json()
     revalidatePath('/')
 }

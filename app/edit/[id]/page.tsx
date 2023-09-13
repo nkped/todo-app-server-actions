@@ -2,7 +2,6 @@ import React from 'react'
 import fetchTodo from '@/lib/fetchTodo'
 import Todo from '@/app/components/Todo'
 
-//build fetchTodo
 
 
 type Props = {
@@ -17,7 +16,7 @@ export default async function page({ params: { id } }: Props) {
 
   console.log('hello from edit todo', todo)
 
-  //if (!todo) notFound()
+  
 
   return (
     <>
