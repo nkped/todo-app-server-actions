@@ -1,20 +1,22 @@
+
 import React from 'react'
-import { addTodo } from '@/lib/action'
+import { addTodo } from '@/lib/actions'
 
 const AddTodo = () => {
+  let content = (
 
-  return (
-    <form action={addTodo}>
+  <form action={addTodo}>
       <input 
         type='text' 
         name='title'
         placeholder='Next todo'    
         />
 
-       <button type='submit'>Submit</button>
+       <button type="submit">Submit</button>
 
-    </form>
-  )
+    </form>)
+
+      return content
 }
 
 export default AddTodo

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { deleteTodo } from '@/lib/action'
+import { deleteTodo } from '@/lib/actions'
 import Checkbox from './Checkbox'
 
 
