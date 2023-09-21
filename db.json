@@ -2,12 +2,6 @@
   "todos": [
     {
       "userId": 1,
-      "title": "Write Code 💻",
-      "id": 4,
-      "completed": false
-    },
-    {
-      "userId": 1,
       "title": "eat",
       "completed": true,
       "id": 8
@@ -21,8 +15,20 @@
     {
       "userId": 1,
       "title": "movie",
-      "completed": true,
+      "completed": false,
       "id": 33
+    },
+    {
+      "userId": 1,
+      "title": "new todo",
+      "completed": false,
+      "id": 34
+    },
+    {
+      "userId": 1,
+      "title": "write code",
+      "completed": false,
+      "id": 35
     }
   ]
 }

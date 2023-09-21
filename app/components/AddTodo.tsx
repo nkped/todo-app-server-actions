@@ -5,14 +5,17 @@ import { addTodo } from '@/lib/actions'
 const AddTodo = () => {
   let content = (
 
-  <form action={addTodo}>
+  <form action={addTodo} className="flex gap-2 items-center">
       <input 
         type='text' 
         name='title'
-        placeholder='Next todo'    
+        placeholder='Add todo..' 
+        className="text-2xl p-1 rounded-lg flex-grow w-full"
+        autoFocus   
         />
        <button 
-        type="submit"
+        type="submit" 
+        className="p-2 text-xl rounded-2xl text-black border-solid border-black border-2 max-w-xs bg-green-400 hover:cursor-pointer hover:bg-green-400"
         >Submit</button>
 
     </form>)

@@ -4,10 +4,10 @@ import AddTodo from './components/AddTodo'
 
 const HomePage = () => {
   return (
-    <main>
+    <>
       <AddTodo />
       <TodoList />
-    </main>
+    </>
   )
 }
 

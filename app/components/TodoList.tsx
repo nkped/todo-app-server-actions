@@ -12,9 +12,11 @@ const TodoList = async () => {
     content = (<p>Sorry, no todos available..</p>)
   }
   else {
+    const sortedTodos = todos.reverse()
+
     content = (
       <>
-        {todos.map((todo) => (
+         {sortedTodos.map((todo) => (
           <Todo key={todo.id} {...todo} />
         ))}
       </>

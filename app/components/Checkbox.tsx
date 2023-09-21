@@ -25,6 +25,7 @@ const Checkbox = ({todo,}: {todo: Todo,}) =>
             checked={optimisticTodo.completed}
             id='completed' 
             name='completed'
+            className="min-w-[2rem] min-h-[2rem]"
             //onChange={() => startTransition(() => updateTodo(todo))}
             disabled={pending}
             onChange={ async () => {
