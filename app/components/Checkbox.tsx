@@ -3,13 +3,14 @@
 import React from 'react'
 import { updateTodo } from '@/lib/actions'
 //import { useTransition } from 'react'
-//import { experimental_useFormStatus as useFormStatus } from 'react-dom'
+import { experimental_useFormStatus as useFormStatus } from 'react-dom'
 import { experimental_useOptimistic as useOptimistic } from 'react'
 
 
 const Checkbox = ({todo,}: {todo: Todo,}) => 
 {
     //const [ isPending, startTransition ] = useTransition()
+    const {pending} = useFormStatus()
     const [optimisticTodo, addOptimisticTodo] = useOptimistic(
         todo, (
             state: Todo,
@@ -22,10 +23,10 @@ const Checkbox = ({todo,}: {todo: Todo,}) =>
         <input 
             type='checkbox'
             checked={optimisticTodo.completed}
-            //id='completed' 
+            id='completed' 
             name='completed'
             //onChange={() => startTransition(() => updateTodo(todo))}
-            //disabled={isPending}
+            disabled={pending}
             onChange={ async () => {
                 addOptimisticTodo(!todo.completed)
                 await updateTodo(todo)

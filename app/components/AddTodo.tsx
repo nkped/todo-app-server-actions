@@ -1,4 +1,4 @@
-
+'use client'
 import React from 'react'
 import { addTodo } from '@/lib/actions'
 
@@ -11,8 +11,9 @@ const AddTodo = () => {
         name='title'
         placeholder='Next todo'    
         />
-
-       <button type="submit">Submit</button>
+       <button 
+        type="submit"
+        >Submit</button>
 
     </form>)
 

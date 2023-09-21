@@ -1,4 +1,3 @@
-import React from 'react'
 import { fetchTodos } from '@/lib/fetchTodos'
 import Todo from './Todo'
 
@@ -12,7 +11,6 @@ const TodoList = async () => {
 
     content = (<p>Sorry, no todos available..</p>)
   }
-
   else {
     content = (
       <>
