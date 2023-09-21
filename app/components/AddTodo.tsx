@@ -1,6 +1,7 @@
 'use client'
-import React from 'react'
 import { addTodo } from '@/lib/actions'
+import { AiOutlineArrowRight } from 'react-icons/ai'
+
 
 const AddTodo = () => {
   let content = (
@@ -16,7 +17,9 @@ const AddTodo = () => {
        <button 
         type="submit" 
         className="p-2 text-xl rounded-2xl text-black border-solid border-black border-2 max-w-xs bg-green-400 hover:cursor-pointer hover:bg-green-400"
-        >Submit</button>
+        >
+          <AiOutlineArrowRight />
+        </button>
 
     </form>)
 

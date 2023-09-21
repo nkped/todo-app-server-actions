@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { deleteTodo } from '@/lib/actions'
 import Checkbox from './Checkbox'
-
+import { FaTrash } from 'react-icons/fa'
 
 const Todo = (todo: Todo) => {
   console.log('todos from Todo: ', todo)
@@ -20,7 +20,8 @@ const Todo = (todo: Todo) => {
             'use server'
             await deleteTodo(todo)
           }}
-          className="p-3 text-xl rounded-2xl text-black border-solid border-black border-2 max-w-xs bg-red-300 hover:cursor-pointer hover:bg-red-400">DEL
+          className="p-3 text-xl rounded-2xl text-black border-solid border-black border-2 max-w-xs bg-red-300 hover:cursor-pointer hover:bg-red-400">
+            <FaTrash />
         </button>
 
       </div>
