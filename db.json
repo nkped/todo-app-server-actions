@@ -3,19 +3,19 @@
     {
       "userId": 1,
       "title": "eat",
-      "completed": true,
+      "completed": false,
       "id": 8
     },
     {
       "userId": 1,
       "title": "run",
-      "completed": true,
+      "completed": false,
       "id": 11
     },
     {
       "userId": 1,
       "title": "movie",
-      "completed": false,
+      "completed": true,
       "id": 33
     },
     {
