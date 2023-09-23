@@ -5,7 +5,6 @@ import Checkbox from './Checkbox'
 import { FaTrash } from 'react-icons/fa'
 
 const Todo = (todo: Todo) => {
-  console.log('todos from Todo: ', todo)
   return (
     <form className="my-4 flex justify-between items-center">
       <label htmlFor='completed' className="text-2xl hover:underline">
