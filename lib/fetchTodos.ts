@@ -1,7 +1,6 @@
 
 const baseUrl = process.env.JSON_SERVER
 
-console.log(process.env.JSON_SERVER)
 
 export async function fetchTodos() {
     try {

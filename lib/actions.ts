@@ -2,12 +2,13 @@
 
 import { revalidatePath } from "next/cache"
 
+const baseUrl = process.env.JSON_SERVER
 
 export async function addTodo(data: FormData) {
-    
+        
     const title = data.get('title')
 
-    await fetch('http://localhost:3500/todos', {
+    await fetch(`${baseUrl}/todos`, {
         method: 'POST',        
             headers: {
                 'Content-Type': 'application/json'
@@ -20,11 +21,10 @@ export async function addTodo(data: FormData) {
 
 
 export async function deleteTodo(todo: Todo) {
-    const res = await fetch(`http://localhost:3500/todos/${todo.id}`, {
+
+    await fetch(`${baseUrl}/todos/${todo.id}`, {
     method: 'DELETE'
     })
-
-    await res.json()
 
     revalidatePath('/')
 }
@@ -43,7 +43,10 @@ export async function updateTodo(
             ...todo, completed: !todo.completed
         })
     })
-
+    
     await res.json()
+
     revalidatePath('/')
-}
+       
+
+    }

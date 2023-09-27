@@ -7,8 +7,9 @@ import { experimental_useFormStatus as useFormStatus } from 'react-dom'
 import { experimental_useOptimistic as useOptimistic } from 'react'
 
 
-const Checkbox = ({todo,}: {todo: Todo,}) => 
+const Checkbox = ({todo,}: {todo: Todo,}) =>
 {
+    console.log('this is todo from checkbox', todo)
     //const [ isPending, startTransition ] = useTransition()
     const {pending} = useFormStatus()
     const [optimisticTodo, addOptimisticTodo] = useOptimistic(
@@ -19,7 +20,6 @@ const Checkbox = ({todo,}: {todo: Todo,}) =>
     )
 
   return (
-    <div>
         <input 
             type='checkbox'
             checked={optimisticTodo.completed}
@@ -28,13 +28,12 @@ const Checkbox = ({todo,}: {todo: Todo,}) =>
             className="min-w-[2rem] min-h-[2rem]"
             //onChange={() => startTransition(() => updateTodo(todo))}
             disabled={pending}
-            onChange={ async () => {
+             onChange={ async () => {
                 addOptimisticTodo(!todo.completed)
                 await updateTodo(todo)
                 }
             }
             />
-     </div>
   )
 }
 
