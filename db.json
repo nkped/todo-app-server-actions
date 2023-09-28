@@ -27,13 +27,13 @@
     {
       "userId": 1,
       "title": "write code",
-      "completed": false,
+      "completed": true,
       "id": 35
     },
     {
       "userId": 1,
       "title": "get some more kålskål",
-      "completed": false,
+      "completed": true,
       "id": 36
     }
   ]

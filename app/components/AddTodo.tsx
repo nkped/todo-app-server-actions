@@ -1,4 +1,3 @@
-'use client'
 import { addTodo } from '@/lib/actions'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 
@@ -21,7 +20,8 @@ const AddTodo = () => {
           <AiOutlineArrowRight />
         </button>
 
-    </form>)
+    </form>
+    )
 
       return content
 }

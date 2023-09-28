@@ -1,40 +1,46 @@
 'use client'
 
-import React from 'react'
 import { updateTodo } from '@/lib/actions'
 //import { useTransition } from 'react'
 import { experimental_useFormStatus as useFormStatus } from 'react-dom'
+import { useRouter } from 'next/navigation'
 import { experimental_useOptimistic as useOptimistic } from 'react'
 
-
-const Checkbox = ({todo,}: {todo: Todo,}) =>
-{
-    console.log('this is todo from checkbox', todo)
-    //const [ isPending, startTransition ] = useTransition()
-    const {pending} = useFormStatus()
+export default function UpdateCheckbox({
+    todo,
+}: {
+    todo: Todo,
+}) {
+    //const [isPending, startTransition] = useTransition()
+    const router = useRouter()
+    const { pending } = useFormStatus()
     const [optimisticTodo, addOptimisticTodo] = useOptimistic(
-        todo, (
+        todo,
+        (
             state: Todo,
-            completed: boolean,
-        ) => ({...state, completed})
+            completed: boolean
+        ) => ({ ...state, completed })
     )
 
-  return (
-        <input 
-            type='checkbox'
-            checked={optimisticTodo.completed}
-            id='completed' 
-            name='completed'
-            className="min-w-[2rem] min-h-[2rem]"
-            //onChange={() => startTransition(() => updateTodo(todo))}
-            disabled={pending}
-             onChange={ async () => {
-                addOptimisticTodo(!todo.completed)
-                await updateTodo(todo)
-                }
-            }
-            />
-  )
-}
+    return (
 
-export default Checkbox
+        <input
+            type="checkbox"
+            checked={optimisticTodo.completed}
+            //checked={todo.completed}
+            id="completed"
+            name="completed"
+            //onChange={() => startTransition(() => updateTodo(todo))}
+            onChange={async () => {
+                addOptimisticTodo(!todo.completed)
+                console.log('this is todo completed from checkbox:', todo.completed)
+                console.log('this is todo from checkbox:', todo)
+                await updateTodo(todo)
+                router.refresh() // updates client-side cache 
+            }}
+            disabled={pending}
+            className="min-w-[2rem] min-h-[2rem]"
+        />
+
+    )
+}
