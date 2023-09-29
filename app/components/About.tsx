@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='flex justify-center my-6 py-4 text-2xl text-white/90 no-underline font-bold hover:text-white rounded-lg bg-slate-400
+    <div className='flex justify-center my-6 py-4 px-2 text-2xl text-white/90 no-underline font-bold hover:text-white rounded-lg bg-slate-400
     
     hover:cursor-pointer'>
 

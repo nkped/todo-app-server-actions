@@ -15,7 +15,8 @@ export async function fetchTodos() {
        
        try {
            
-        const res = await fetch(`${baseUrl}`)
+        const res = await fetch(`${baseUrl}`, {
+            next: { revalidate: 0 } })
 
         const todos: Todo[] = await res.json()
         return todos

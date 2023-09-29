@@ -19,14 +19,8 @@
       "id": 33
     },
     {
-      "userId": 1,
-      "title": "write code",
-      "completed": true,
-      "id": 35
-    },
-    {
       "title": "add env vars",
-      "completed": false,
+      "completed": true,
       "id": 37
     }
   ]
