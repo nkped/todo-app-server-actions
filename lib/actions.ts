@@ -52,5 +52,4 @@ export async function updateTodo(todo: Todo) {/*
 
     await res.json()
     revalidatePath('/')
-    //return res
     }
