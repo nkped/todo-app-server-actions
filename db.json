@@ -25,15 +25,14 @@
       "id": 35
     },
     {
-      "userId": 1,
-      "title": "get some more kålskål",
-      "completed": false,
-      "id": 36
+      "title": "add env vars",
+      "completed": true,
+      "id": 37
     },
     {
-      "title": "add env vars",
+      "title": "lunch",
       "completed": false,
-      "id": 37
+      "id": 38
     }
   ]
 }

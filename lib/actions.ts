@@ -1,12 +1,11 @@
 'use server'
-
 import { revalidatePath } from "next/cache"
 
-//const baseUrl = process.env.JSON_SERVER
+const baseUrl = process.env.BASE_URL
+
 
 export async function addTodo(data: FormData) {
     
-    const baseUrl = process.env.BASE_URL
     console.log('this is baseUrl from addtodo actions: ', baseUrl)
     
     const title = data.get('title')
@@ -26,7 +25,7 @@ export async function addTodo(data: FormData) {
 
 export async function deleteTodo(todo: Todo) {
 
-    const baseUrl = process.env.BASE_URL
+   //const baseUrl = process.env.BASE_URL
     console.log('this is baseUrl from delete actions: ', baseUrl)
     
     await fetch(`${baseUrl}/${todo.id}`, {
@@ -40,7 +39,7 @@ export async function deleteTodo(todo: Todo) {
 
 export async function updateTodo(todo: Todo) {
 
-    const baseUrl = process.env.BASE_URL
+    //const baseUrl = process.env.BASE_URL
     console.log('this is baseUrl from update actions: ', baseUrl)
     
     const res = await fetch(`${baseUrl}/${todo.id}`    
