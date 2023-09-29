@@ -20,12 +20,6 @@
     },
     {
       "userId": 1,
-      "title": "new todo",
-      "completed": false,
-      "id": 34
-    },
-    {
-      "userId": 1,
       "title": "write code",
       "completed": true,
       "id": 35

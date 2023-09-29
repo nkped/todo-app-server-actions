@@ -24,7 +24,10 @@ export async function addTodo(data: FormData) {
 
 export async function deleteTodo(todo: Todo) {
 
-    await fetch(`https://todo-json-server-9lpj.onrender.com/todos/${todo.id}`, {
+    const baseUrl = process.env.BASE_URL
+    console.log('this is baseUrl from delete actions: ', baseUrl)
+
+    await fetch(`${baseUrl}/${todo.id}`, {
     method: 'DELETE'
     })
 
