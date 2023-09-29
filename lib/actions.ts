@@ -5,12 +5,14 @@ import { revalidatePath } from "next/cache"
 //const baseUrl = process.env.JSON_SERVER
 
 export async function addTodo(data: FormData) {
-        
+    
+    const baseUrl = process.env.BASE_URL
+    console.log('this is baseUrl from addtodo actions: ', baseUrl)
+    
     const title = data.get('title')
-
     console.log('this is data from actions addTodo: ', data)
 
-    await fetch(`https://todo-json-server-9lpj.onrender.com/todos`, {
+    await fetch(`${baseUrl}`, {
         method: 'POST',        
             headers: {
                 'Content-Type': 'application/json'
