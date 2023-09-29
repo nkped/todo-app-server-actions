@@ -3,7 +3,8 @@
 export async function fetchTodos() {
     
     const baseUrl = process.env.BASE_URL
-    console.log('this is baseUrl from fetchTodos: ', baseUrl)
+    console.log('this is baseUrl from fetchTodo: ', baseUrl)
+    
 
     /*
     const res = await fetch('http://localhost:3500/todos')
