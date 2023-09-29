@@ -28,23 +28,22 @@ export async function deleteTodo(todo: Todo) {
 
     const baseUrl = process.env.BASE_URL
     console.log('this is baseUrl from delete actions: ', baseUrl)
-
+    
     await fetch(`${baseUrl}/${todo.id}`, {
-    method: 'DELETE'
+        method: 'DELETE'
     })
-
+    
     revalidatePath('/')
 }
 
 
 
-export async function updateTodo(todo: Todo) {/* 
-    console.log('todo from actions', todo)
-    console.log('this is typeof todo: ', typeof(todo)) */
-    //const res = await fetch(`http://localhost:3500/todos/${todo.id}`
+export async function updateTodo(todo: Todo) {
+
+    const baseUrl = process.env.BASE_URL
+    console.log('this is baseUrl from update actions: ', baseUrl)
     
-    
-    const res = await fetch(`https://todo-json-server-9lpj.onrender.com/todos/${todo.id}`    
+    const res = await fetch(`${baseUrl}/${todo.id}`    
     , {
         method: 'PUT',
         headers: {
