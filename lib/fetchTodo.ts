@@ -11,6 +11,7 @@ export default async function fetchTodo(id: string) {
     console.log('this is baseUrl from fetchTodo: ', baseUrl)
     
     const res = await fetch(`${baseUrl}/${id}`)
+    
 
     //if (!res.ok) return undefined
 

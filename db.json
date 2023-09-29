@@ -26,13 +26,8 @@
     },
     {
       "title": "add env vars",
-      "completed": true,
-      "id": 37
-    },
-    {
-      "title": "lunch",
       "completed": false,
-      "id": 38
+      "id": 37
     }
   ]
 }
